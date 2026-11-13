@@ -1,0 +1,17 @@
+[package]
+name = "xsize"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+#clap = "4.6.7"
+#walkdir = "2.5.0"
+
+
+### for a minimal rust binary size
+[profile-release]
+opt-level = 'z'
+lto = true
+cadogen-units = 1
+panic = 'abort'
+strip = true
